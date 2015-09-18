@@ -5,12 +5,14 @@
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600|Lato' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="files.js"></script>
+    <script type="text/javascript" src="index.js"></script>
     <title>John Du</title>
     
   </head>
 
-  <body>
+  <body onload="setabout()">
     <!-- <div class = "header"></div> -->
 
     <div class="jumbotron">
@@ -22,17 +24,15 @@
     </div> 
 
     <div class="aboutme">
+      <br>
+      <center ><a href="#" onclick="setabout()">About</a> | <a href="#" onclick="setportfolio()">Portfolio</a></center>
       <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-5">
-          <p></p>
-          <h2>About Me</h2>
-          <p>I'm John Du, senior at Purdue University majoring in Computer Science with a focus in Software Engineering and Security. I like to think of myself as a creator. Code is just another way to create great things. It's why I make pixel art. It's why I develop games in my spare time.</p>
-	  <p>Check out my pixel art portfolio! I'm always working to improve my skills, but I do take commissions for pixel art. Email me to start.</p>
+        <div class="col-md-1"></div>
+        <div class="col-md-7" id="content">
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
           <center>
-	    <img id="profile" title="" src="./assets/selfie.gif" height="192" width="192">
+	    <img id="profile" />
 	  </center>
         </div>
         <div class="col-md-2"></div>
@@ -47,19 +47,21 @@
                     <h3>Professional</h3>
 		    <p>
 			<img src="./assets/linkedin_badge.png" height="16" width="16" />
-			<a href="https://www.linkedin.com/in/johndu9">LinkedIn</a>
+			<a target="_blank" href="https://www.linkedin.com/in/johndu9">LinkedIn</a>
 			<br>
 			<img src="./assets/github_badge.png" height="16" width="16" />
-			<a href="https://github.com/johndu9">GitHub</a>
+			<a target="_blank" href="https://github.com/johndu9">GitHub</a>
 			<br>
-			<a href="./assets/John Du Resume.pdf">Resume</a>
+			<a target="_blank" href="./assets/John Du Resume.pdf">Resume</a>
 		    </p>
                 </div>
                 <div class="col-md-4">
                     <h3>Pixel Art</h3>
                     <p>
 			<img src="./assets/pixel_badge.png" height="16" width="16">
-                        <a href="https://twitter.com/desukase">Twitter</a>
+                        <a target="_blank" href="https://twitter.com/desukase">Twitter</a>
+			<br>
+			<a href="#" onclick="setportfolio()">Portfolio</a>
                     </p>
                 </div>
                 <div class ="col-md-4">
@@ -74,3 +76,4 @@
 
   </body>
 </html>
+

@@ -84,6 +84,13 @@ a:hover {
     text-align: center;
 }
 
+#content img {
+    width: 160px;
+    height: 144px;
+    margin: 2px;
+    border-radius: 8px;
+}
+
 html {
     margin: 16px;
 }
