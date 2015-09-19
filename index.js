@@ -12,28 +12,28 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
+document.getElementById("header").innerHTML=header;
+
 function setabout() {
 	pfindex = -1;
-	document.getElementById("content").innerHTML='<h2>About Me</h2><p>I&#39;m John Du, senior at Purdue University majoring in Computer Science with a focus in Software Engineering and Security. I like to think of myself as a creator. Code is just another way to create great things. It&#39;s why I make pixel art. It&#39;s why I develop games in my spare time. It&#39;s why I love doing what I do.</p>';
-	setprofile("./assets/selfie.gif", "224", "224", "#");
+	document.getElementById("content").innerHTML = about;
+	setprofile(profilepath, "320", "288", "#");
 }
 
 function setportfolio() {
 	pfindex = 0;
 	files.sort(function() { return 0.5 - Math.random(); }); //good enough honestly
 	var content = document.getElementById("content");
-	content.innerHTML = '<h2>Pixel Art Portfolio<h2>';
-	var first = './assets/pixelart/' + files[0];
+	content.innerHTML = portfolio;
 	for (i = 0; i < files.length; i++) {
-		var full = '"./assets/pixelart/' + files[i] + '"';
-		content.innerHTML += '<a onclick=\'settoasset(' + i + ')\'><img src=' + full + ' /></a>';
+		content.innerHTML += '<a onclick=\'settoasset(' + i + ')\'><img src="' + pfpath + files[i] + '" /></a>';
 	}
 	settoasset(pfindex);
 }
 
 function settoasset(index) {
 	pfindex = index;
-	var path = './assets/pixelart/' + files[index];
+	var path = pfpath + files[index];
 	setprofile(path, "320", "288", path);
 }
 
