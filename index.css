@@ -29,7 +29,7 @@ a:hover {
 }
 .jumbotron {
   background-color: #ec9a54;
-  height: 192px;
+  height: 160px;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -93,4 +93,8 @@ a:hover {
 
 html {
     margin: 16px;
+}
+
+body {
+    background: #fcefec;
 }
